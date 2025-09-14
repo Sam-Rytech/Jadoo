@@ -3,19 +3,19 @@ import { motion } from 'framer-motion'
 
 const destinations = [
   {
-    img: '/images/rome.jpg',
+    img: '/Dest1.jpg',
     city: 'Rome, Italy',
     price: '$5.42k',
     days: '10 Days Trip',
   },
   {
-    img: '/images/london.jpg',
+    img: '/Dest2.png',
     city: 'London, UK',
     price: '$4.2k',
     days: '12 Days Trip',
   },
   {
-    img: '/images/europe.jpg',
+    img: '/Dest3.png',
     city: 'Full Europe',
     price: '$15k',
     days: '28 Days Trip',
@@ -24,32 +24,32 @@ const destinations = [
 
 export default function Destinations() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20">
-      <h3 className="text-center text-sm uppercase text-gray-500 font-medium">
+    <section className="px-4 py-20 mx-auto max-w-7xl">
+      <h3 className="text-sm font-medium text-center text-gray-500 uppercase">
         Top Selling
       </h3>
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-12">
+      <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl">
         Top Destinations
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid gap-8 md:grid-cols-3">
         {destinations.map((dest, idx) => (
           <motion.div
             key={idx}
             whileHover={{ scale: 1.03 }}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden"
+            className="overflow-hidden bg-white shadow-lg rounded-2xl"
           >
             <img
               src={dest.img}
               alt={dest.city}
-              className="w-full h-56 object-cover"
+              className="object-cover w-full h-56"
             />
             <div className="p-5 space-y-2">
               <div className="flex justify-between">
                 <h4 className="font-semibold">{dest.city}</h4>
                 <p className="text-gray-700">{dest.price}</p>
               </div>
-              <p className="text-gray-500 text-sm">{dest.days}</p>
+              <p className="text-sm text-gray-500">{dest.days}</p>
             </div>
           </motion.div>
         ))}

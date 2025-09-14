@@ -40,7 +40,7 @@ export default function Hero() {
 
       {/* Right Image */}
       <motion.img
-        src="/images/hero-image.png"
+        src="/hero-image.png"
         alt="Traveler"
         className="w-full max-w-md mx-auto md:max-w-lg"
         initial={{ opacity: 0, scale: 0.9 }}
